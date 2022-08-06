@@ -48,16 +48,13 @@
             height: inherit;
             width: inherit;
             &--bar {
-                transition: opacity 1s ease;
+                transition: opacity .5s ease;
                 display: block;
                 position: relative;
                 background-color: var(--red);
 
                 height: 4px;
                 width: 30px;
-                &:hover {
-                    background-color: var(--white);
-                }
             }
             &::after,
             &::before {
@@ -93,11 +90,6 @@
         }
         &:hover {
             cursor: pointer;
-        }
-        &--burger:hover &--burger--bar,
-        &--burger:hover::after,
-        &--burger:hover::before {
-            background-color: var(--black);
         }
     }
 
