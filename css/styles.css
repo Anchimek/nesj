@@ -350,6 +350,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 1.25px;
   font-weight: 300;
+  font-size: 16px;
   overflow-x: hidden;
 }
 
@@ -644,6 +645,19 @@ button:hover {
 }
 
 .section-four--article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
 }
 
@@ -845,6 +859,21 @@ button:hover {
   img {
     width: 500px;
   }
+  .section-four--article {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .section-four--image {
+    min-width: 300px;
+    min-height: 300px;
+  }
   .section-six .form-inputs input,
   .section-six .form-inputs textarea {
     margin-bottom: 7em;
@@ -926,33 +955,6 @@ button:hover {
     font-size: 1em;
     padding: 0 0 0 5em;
   }
-  .section-four--article {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .section-four--image {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    margin-right: 1.75em;
-    width: 100%;
-    -webkit-box-shadow: 0px 0px 1px black;
-            box-shadow: 0px 0px 1px black;
-  }
   .section-five {
     height: 450px;
   }
@@ -960,17 +962,14 @@ button:hover {
     width: 350px;
   }
   .section-five--slider {
-    font-size: 1.45rem;
+    font-size: 1.15rem;
   }
   .section-five--slider cite {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 }
 
 @media all and (min-width: 1200px) {
-  body {
-    font-size: 20px;
-  }
   p {
     font-size: 1rem;
   }

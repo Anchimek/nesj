@@ -114,6 +114,8 @@ button {
     @extend .section-one;
     width: 100%;
     &--article {
+        @include setFlex();
+        flex-direction: column;
         width: 100%;
     }
     &--image {
@@ -248,6 +250,17 @@ button {
     img {
         width: 500px;
     }
+    .section-four {
+        &--article {
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        &--image {
+            min-width: 300px;
+            min-height: 300px;
+        }
+    }
     .section-six {
         .form-inputs {
             input, 
@@ -317,35 +330,21 @@ button {
             padding: 0 0 0 5em;
         }
     }
-    .section-four--article {
-        @include setFlex();
-    }
-    .section-four--image {
-        @include setFlex();
-        position: relative;
-
-        margin-right: 1.75em;
-        width: 100%;
-        box-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
-    }
     .section-five {
         height: 450px;
         img {
             width: 350px;
         }
         &--slider {
-            font-size: 1.45rem;
+            font-size: 1.15rem;
             cite {
-                font-size: 1.15rem;
+                font-size: 1rem;
             }
         }
     }
 }
 
 @media all and (min-width: 1200px) {
-    body {
-        font-size: 20px;
-    }
     p {
         font-size: 1rem;
     }
