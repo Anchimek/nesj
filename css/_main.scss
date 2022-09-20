@@ -273,6 +273,16 @@ button {
     }
 }
 
+@media all and (min-width: 947px) {
+    .section-four {
+        &--image {
+            min-width: 400px;
+            min-height: 400px;
+        }
+    }
+    
+}
+
 @media all and (min-width: 1024px) {
     .main-content {
         padding: 0 5em;
@@ -351,11 +361,17 @@ button {
     .section-one--description {
         padding: 2em;
     }
+    .section-four--article {
+        grid-gap: 7em;
+    }
 }
 
 @media all and (min-width: 1440px) {
     .section-one--description {
         padding: 1em 6em;
+    }
+    .section-four--article {
+        grid-gap: 11em;
     }
 }
 
@@ -365,5 +381,8 @@ button {
     }
     p {
         font-size: 1.15rem;
+    }
+    .section-four--article {
+        grid-gap: 23em;
     }
 }

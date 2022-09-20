@@ -3,10 +3,8 @@
 a,
 a:active,
 a:hover,
-a:visited,
 a:focus {
     position: relative;
-
     color: var(--black);
     text-decoration: none;
     &::before {
@@ -18,7 +16,8 @@ a:focus {
         background-color: var(--black);
         content: '';
     }
-    
+}
+a:hover {
     &:hover::before,
     &:focus::before {
         width: 100%;
