@@ -195,12 +195,16 @@ button {
     
         flex-direction: column;
         text-align: center;
-        font-size: 1.25rem;
+        font-size: 1rem;
+        margin-top: 2em;
+        margin-bottom: 1rem;
         img {
             width: 250px;
             height: auto;
-    
-            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+        .swiper-wrapper {
+            margin-bottom: 2rem;
         }
     }
 }
@@ -396,11 +400,17 @@ button {
         img {
             width: 350px;
         }
-        &--slider {
-            font-size: 1.45rem;
+        &--comment {
+            font-size: 1.5rem;
             cite {
                 font-size: 1.15rem;
             }
+        }
+        .swiper-wrapper {
+            margin-bottom: 4rem;
+        }
+        img {
+            margin-bottom: 2rem;
         }
     }
 }

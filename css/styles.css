@@ -773,13 +773,19 @@ button:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  margin-top: 2em;
+  margin-bottom: 1rem;
 }
 
 .section-five--comment img {
   width: 250px;
   height: auto;
-  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.section-five--comment .swiper-wrapper {
+  margin-bottom: 2rem;
 }
 
 .section-six {
@@ -1040,11 +1046,17 @@ button:hover {
   .section-five img {
     width: 350px;
   }
-  .section-five--slider {
-    font-size: 1.45rem;
+  .section-five--comment {
+    font-size: 1.5rem;
   }
-  .section-five--slider cite {
+  .section-five--comment cite {
     font-size: 1.15rem;
+  }
+  .section-five .swiper-wrapper {
+    margin-bottom: 4rem;
+  }
+  .section-five img {
+    margin-bottom: 2rem;
   }
 }
 
