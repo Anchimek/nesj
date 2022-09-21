@@ -847,6 +847,12 @@ button:hover {
   img {
     width: 370px;
   }
+  .section-five {
+    height: 550px;
+  }
+  .swiper-wrapper {
+    margin-bottom: .5rem;
+  }
 }
 
 @media all and (min-width: 768px) {
@@ -1050,6 +1056,9 @@ button:hover {
   }
   .section-five img {
     margin-bottom: 2rem;
+  }
+  .section-six {
+    margin-bottom: 1rem;
   }
 }
 
