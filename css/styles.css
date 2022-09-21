@@ -409,7 +409,6 @@ body {
 a,
 a:active,
 a:hover,
-a:visited,
 a:focus {
   position: relative;
   color: var(--black);
@@ -419,7 +418,6 @@ a:focus {
 a::before,
 a:active::before,
 a:hover::before,
-a:visited::before,
 a:focus::before {
   position: absolute;
   bottom: -5px;
@@ -430,15 +428,7 @@ a:focus::before {
   content: '';
 }
 
-a:hover::before, a:focus::before,
-a:active:hover::before,
-a:active:focus::before,
-a:hover:hover::before,
-a:hover:focus::before,
-a:visited:hover::before,
-a:visited:focus::before,
-a:focus:hover::before,
-a:focus:focus::before {
+a:hover:hover::before, a:hover:focus::before {
   width: 100%;
   -webkit-transition: width .3s ease-in;
   transition: width .3s ease-in;
@@ -1208,14 +1198,31 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 50px;
+  height: 100px;
   width: 100%;
-  padding: 0 0 1em 0;
+  padding: 2em 0 1em 0;
+  text-align: center;
+  grid-gap: 1em;
 }
 
 .footer p {
   font-size: .75rem;
   margin: 0;
+}
+
+.footer .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: .75em;
+}
+
+.footer .social-media i {
+  font-size: 1rem;
+}
+
+.footer .social-media i:hover {
+  color: var(--orange);
 }
 
 @media all and (min-width: 1024px) {

@@ -1,12 +1,24 @@
 .footer {
     @include setFlex();
     flex-direction: column;
-    height: 50px;
+    height: 100px;
     width: 100%;
-    padding: 0 0 1em 0;
+    padding: 2em 0 1em 0;
+    text-align: center;
+    grid-gap: 1em;
     p {
         font-size: .75rem;
         margin: 0;
+    }
+    .social-media {
+        display: flex;
+        grid-gap: .75em;
+        i {
+            font-size: 1rem;
+            &:hover {
+                color: var(--orange);
+            }
+        }
     }
 }
 
