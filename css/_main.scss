@@ -263,9 +263,10 @@ button {
     }
     .section-four {
         &--article {
-            justify-content: space-between;
+            justify-content: center;
             flex-direction: row;
             flex-wrap: wrap;
+            grid-gap: 1em;
         }
         &--image {
             min-width: 300px;
