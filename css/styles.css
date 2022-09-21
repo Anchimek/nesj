@@ -863,6 +863,9 @@ button:hover {
   img {
     width: 500px;
   }
+  .section-five {
+    height: 350px;
+  }
   .section-six .form-inputs input,
   .section-six .form-inputs textarea {
     margin-bottom: 7em;
@@ -1041,7 +1044,7 @@ button:hover {
     font-size: 1.75rem;
   }
   .section-five {
-    height: 450px;
+    height: 500px;
   }
   .section-five img {
     width: 350px;
