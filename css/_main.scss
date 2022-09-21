@@ -13,6 +13,7 @@
 p {
     font-size: .8rem;
     line-height: 1.75em;
+    font-weight: 300;
 }
 
 span.red-span,
@@ -39,7 +40,7 @@ button {
     border: none;
     border-radius: 15px;
 
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
     letter-spacing: .5px;
     &:hover {
@@ -114,6 +115,8 @@ button {
     @extend .section-one;
     width: 100%;
     &--article {
+        @include setFlex();
+        flex-direction: column;
         width: 100%;
     }
     &--image {
@@ -126,12 +129,12 @@ button {
         
         margin: 3em 0;
         padding: 1em 1.5em 2em 1.5em;
-        min-height: 400px;
+        height: 270px;
+        width: 270px;
 
-        border-radius: 1em;
-        h3 {
-            color: var(--white);
-        }
+        border-radius: 50%;
+        font-weight: 800;
+        border: 5px solid var(--orange);
         &::before {
             position: absolute;
             top:0; left: 0;
@@ -140,30 +143,31 @@ button {
             width: 100%;
             height: 100%;
             opacity: .4;
-            
-            border-radius: 1em;
+            border-radius: 50%;
         }
         &:first-child::before {
-            background: url('../img/test1.jpg') center/cover;
+            background: url('../img/usluga1.jpg') center/cover;
         }
         &:nth-child(2)::before {
-            background: url('../img/test3.jpg') center/cover ;
+            background: url('../img/usluga2.jpg') center/cover ;
         }
         &:nth-child(3)::before {
-            background: url('../img/test1.jpg') center/cover;
+            background: url('../img/usluga3.jpg') center/cover;
         }
         &:last-child::before {
-            background: url('../img/test4.jpg') center/cover ;
+            background: url('../img/usluga4.jpg') center/cover ;
         }
     }
     &--description {
         text-align: center;
+        z-index: 999;
+        font-weight: 600;
     }
 }
 
 .section-five {
     @extend .section-one;
-    height: 700px;
+    height: 500px;
     &--slider {
         @include setFlex();
         position: relative;
@@ -195,7 +199,7 @@ button {
     
         flex-direction: column;
         text-align: center;
-        font-size: 1rem;
+        font-size: .9rem;
         margin-top: 2em;
         margin-bottom: 1rem;
         img {
@@ -211,6 +215,7 @@ button {
 
 .section-six {
     @extend .section-one;
+    margin-top: 15em;
     margin-bottom: 0;
     .form-inputs {
         @include setFlex();
@@ -226,7 +231,6 @@ button {
             text-align: left;
             border: none;
             border-bottom: 1px solid var(--orange);
-            font-family: 'Kanit', sans-serif;
         }
         textarea {
             resize: none;
@@ -248,12 +252,8 @@ button {
     img {
         width: 370px;
     }
-    
     .section-five {
-        height: 550px;
-    }
-    .swiper-wrapper {
-        margin-bottom: .5rem;
+        height: 300px;
     }
 }
 
@@ -261,8 +261,16 @@ button {
     img {
         width: 500px;
     }
-    .section-five {
-        height: 350px;
+    .section-four {
+        &--article {
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        &--image {
+            min-width: 300px;
+            min-height: 300px;
+        }
     }
     .section-six {
         .form-inputs {
@@ -274,6 +282,19 @@ button {
             }
         }
     }
+    .section-five {
+        height: 150px;
+    }
+}
+
+@media all and (min-width: 947px) {
+    .section-four {
+        &--image {
+            min-width: 400px;
+            min-height: 400px;
+        }
+    }
+    
 }
 
 @media all and (min-width: 1024px) {
@@ -306,9 +327,7 @@ button {
     .section-one,
     .section-two,
     .section-three,
-    .section-four,
-    .section-five,
-    .section-six {
+    .section-four {
         margin-bottom: 10rem;
     }
     .section-one--content {
@@ -334,79 +353,47 @@ button {
             padding: 0 0 0 5em;
         }
     }
-    .section-four--article {
-        @include setFlex();
-        .section-four--description {
-            display: none;
-            color: var(--black);
+    .section-five {
+        height: 300px;
+        margin-bottom: 250px;
+        img {
+            width: 350px;
+        }
+        &--comment {
+            font-size: 1.25rem;
+            cite {
+                font-size: 1.15rem;
+            }
         }
     }
-    .section-four--image {
-        @include setFlex();
-        position: relative;
+    .section-six {
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+}
 
-        margin-right: 1.75em;
-        width: 100%;
-        box-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
-        &::before {
-            display: none;
-        }
-        &:first-child {
-            background: url('../img/test1.jpg') center/cover;
-            transition: all .8s ease;
-            
-            &:hover .section-four--description,
-            &:hover h3 {
-                display: flex;
-            }
-            &:hover {
-                background: rgba(241, 161, 57, 1);
-            }
-        }
-        &:nth-child(2) {
-            background: url('../img/test3.jpg') center/cover ;
-            transition: all .8s ease;
+@media all and (min-width: 1200px) {
+    p {
+        font-size: 1rem;
+    }
+    .section-one--description {
+        padding: 2em;
+    }
+    .section-four--article {
+        grid-gap: 7em;
+    }
+}
 
-            &:hover .section-four--description,
-            &:hover h3 {
-                display: flex;
-            }
-            &:hover {
-                background: rgba(241, 161, 57, 1);
-            }
-        }
-        &:nth-child(3) {
-            background: url('../img/test3.jpg') center/cover ;
-            transition: all .8s ease;
-
-            &:hover .section-four--description,
-            &:hover h3 {
-                display: flex;
-            }
-            &:hover {
-                background: rgba(241, 161, 57, 1);
-            }
-        }
-        &:last-child {
-            background: url('../img/test4.jpg') center/cover ;
-            margin-right: 0;
-            transition: all .8s ease;
-
-            &:hover .section-four--description,
-            &:hover h3 {
-                display: flex;
-            }
-            &:hover {
-                background: rgba(241, 161, 57, 1);
-            }
-        }
-        h3 {
-            color: var(--black);
-            font-size: 1.75rem;
-        }
+@media all and (min-width: 1440px) {
+    .section-one--description {
+        padding: 1em 6em;
+    }
+    .section-four--article {
+        grid-gap: 11em;
     }
     .section-five {
-        height: 500px;
+        height: 300px;
+        margin-bottom: 250px;
         img {
             width: 350px;
         }
@@ -416,33 +403,6 @@ button {
                 font-size: 1.15rem;
             }
         }
-        .swiper-wrapper {
-            margin-bottom: 4rem;
-        }
-        img {
-            margin-bottom: 2rem;
-        }
-    }
-    .section-six {
-        margin-bottom: 1rem;
-    }
-}
-
-@media all and (min-width: 1200px) {
-    body {
-        font-size: 20px;
-    }
-    p {
-        font-size: 1rem;
-    }
-    .section-one--description {
-        padding: 2em;
-    }
-}
-
-@media all and (min-width: 1440px) {
-    .section-one--description {
-        padding: 1em 6em;
     }
 }
 
@@ -453,26 +413,7 @@ button {
     p {
         font-size: 1.15rem;
     }
-}
-
-@keyframes slide-left {
-    from {
-        left: -200px;
-        opacity: 0;
-    }
-    to {
-        left: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes slide-right {
-    from {
-        right: -200px;
-        opacity: 0;
-    }
-    to {
-        right: 0;
-        opacity: 1;
+    .section-four--article {
+        grid-gap: 23em;
     }
 }
