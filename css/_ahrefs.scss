@@ -1,0 +1,36 @@
+@import '_variables';
+
+a,
+a:active,
+a:hover,
+a:focus {
+    position: relative;
+    color: var(--black);
+    text-decoration: none;
+    &::before {
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 0.05em;
+        background-color: var(--black);
+        content: '';
+    }
+}
+a:hover {
+    &:hover::before,
+    &:focus::before {
+        width: 100%;
+        transition: width .3s ease-in;
+    }
+}
+
+a.red {
+    color: var(--red);
+}
+
+a.wout-under {
+    &::before {
+        position: relative;
+    }
+}
